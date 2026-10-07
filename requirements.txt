@@ -1,0 +1,6 @@
+PySide6==6.11.1
+tzdata==2026.3
+
+# nur für Build und Tests, nicht zur Laufzeit nötig
+pyinstaller==6.21.0
+pytest==9.1.1

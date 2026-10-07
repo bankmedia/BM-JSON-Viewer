@@ -1,0 +1,159 @@
+/* Stylesheet der Akten-Ansicht.
+   QTextBrowser versteht nur eine Teilmenge von CSS 2.1 — keine Flexbox, kein
+   Grid, keine Pseudoklassen. Struktur kommt daher aus Tabellen, nicht aus
+   Layout-Regeln. */
+
+body {
+    font-family: "Segoe UI", "Calibri", sans-serif;
+    font-size: 10.5pt;
+    color: #1a1d21;
+}
+
+h1 {
+    font-size: 17pt;
+    font-weight: 600;
+    color: #10233b;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-size: 12.5pt;
+    font-weight: 600;
+    color: #10233b;
+    margin-top: 22px;
+    margin-bottom: 6px;
+    border-color: #c8d2de;
+}
+
+h3 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #34435a;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+h4, h5, h6 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #34435a;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+p { margin-top: 3px; margin-bottom: 3px; }
+
+/* Kopfzeile unter dem Titel: Typ · Anwendung · ID */
+.kopfzeile {
+    color: #6b7789;
+    font-size: 9pt;
+    margin-bottom: 16px;
+}
+
+.anzahl { color: #8894a4; font-weight: normal; font-size: 9.5pt; }
+
+/* Label/Wert-Paare */
+table.form { margin-top: 2px; margin-bottom: 4px; }
+
+table.form td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+td.label {
+    color: #5d6a7d;
+    width: 30%;
+    padding-right: 16px;
+}
+
+td.wert { color: #1a1d21; }
+
+/* Eingebettete Tabellen */
+table.grid {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cdd6e0;
+    background-color: #ffffff;
+}
+
+table.grid th {
+    background-color: #eef2f7;
+    color: #34435a;
+    font-weight: 600;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cdd6e0;
+}
+
+table.grid td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e8f0;
+    vertical-align: top;
+}
+
+td.rowkey { color: #34435a; font-weight: 600; }
+
+/* Rich-Text aus dem Export. Die Quelltabellen bringen keine Rahmen mit —
+   ohne diese Regel stehen die Zellen unlesbar ineinander. */
+.richtext { color: #1a1d21; }
+
+.richtext table {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cdd6e0;
+    background-color: #fbfcfd;
+}
+
+.richtext td, .richtext th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dbe3ec;
+    padding: 4px;
+}
+
+/* Hinweise und Sonderwerte */
+.fehlt {
+    color: #8a6d1f;
+    background-color: #fdf6e3;
+    font-style: italic;
+}
+
+.fehler {
+    color: #8c2f24;
+    background-color: #fdeeec;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.hinweis {
+    color: #6b5a1f;
+    background-color: #fdf6e3;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.leer { color: #97a1af; font-style: italic; }
+
+.mono { font-family: "Consolas", "Courier New", monospace; font-size: 9.5pt; }
+.technisch { color: #8894a4; }
+
+.swatch { border-color: #98a3b3; }
+
+.mehr { margin-top: 2px; margin-bottom: 10px; }
+.mehr a { color: #1f5fa8; }
+
+.dateien { margin-top: 2px; }
+
+/* Fußzeile mit dem Ablageort */
+.pfad {
+    color: #97a1af;
+    font-size: 8.5pt;
+    margin-top: 28px;
+}
